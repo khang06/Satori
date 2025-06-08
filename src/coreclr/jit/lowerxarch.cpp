@@ -867,7 +867,9 @@ GenTree* Lowering::LowerCast(GenTree* tree)
         assert(castToType != TYP_FLOAT || comp->canUseEvexEncoding());
     }
 
-#if defined(TARGET_AMD64)
+    // PATCH: Disable .NET 9.0 float saturation logic
+//#if defined(TARGET_AMD64)
+#if 0
     // Handle saturation logic for X64
     if (varTypeIsFloating(srcType) && varTypeIsIntegral(dstType) && !varTypeIsSmall(dstType))
     {
