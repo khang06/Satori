@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <!-- The .NET product branding version -->
-    <ProductVersion>9.0.6</ProductVersion>
+    <ProductVersion>9.0.6-satori</ProductVersion>
     <!-- File version numbers -->
     <MajorVersion>9</MajorVersion>
     <MinorVersion>0</MinorVersion>
