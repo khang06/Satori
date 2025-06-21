@@ -106,7 +106,8 @@ static bool IsAvxEnabled()
 
 static bool IsAvx512Enabled()
 {
-    return true;
+	// PATCH: Temporarily disable AVX-512 due to FloatFixer miscompiles
+    return false;
 }
 #endif // defined(HOST_X86) || defined(HOST_AMD64)
 #endif // HOST_UNIX
