@@ -393,7 +393,10 @@ RELEASE_CONFIG_INTEGER(EnableAVX512CD,              W("EnableAVX512CD"),        
 RELEASE_CONFIG_INTEGER(EnableAVX512CD_VL,           W("EnableAVX512CD_VL"),         1) // Allows AVX512CD+ AVX512VL+ hardware intrinsics to be disabled
 RELEASE_CONFIG_INTEGER(EnableAVX512DQ,              W("EnableAVX512DQ"),            1) // Allows AVX512DQ+ hardware intrinsics to be disabled
 RELEASE_CONFIG_INTEGER(EnableAVX512DQ_VL,           W("EnableAVX512DQ_VL"),         1) // Allows AVX512DQ+ AVX512VL+ hardware intrinsics to be disabled
-RELEASE_CONFIG_INTEGER(EnableAVX512F,               W("EnableAVX512F"),             1) // Allows AVX512F+ hardware intrinsics to be disabled
+
+// PATCH: Temporarily disable AVX512F due to FloatFixer miscompiles
+RELEASE_CONFIG_INTEGER(EnableAVX512F,               W("EnableAVX512F"),             0) // Allows AVX512F+ hardware intrinsics to be disabled
+
 RELEASE_CONFIG_INTEGER(EnableAVX512F_VL,            W("EnableAVX512F_VL"),          1) // Allows AVX512F+ AVX512VL+ hardware intrinsics to be disabled
 RELEASE_CONFIG_INTEGER(EnableAVX512VBMI,            W("EnableAVX512VBMI"),          1) // Allows AVX512VBMI+ hardware intrinsics to be disabled
 RELEASE_CONFIG_INTEGER(EnableAVX512VBMI_VL,         W("EnableAVX512VBMI_VL"),       1) // Allows AVX512VBMI_VL+ hardware intrinsics to be disabled
